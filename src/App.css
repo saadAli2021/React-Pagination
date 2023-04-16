@@ -1,38 +1,57 @@
 .App {
+  max-width: 768px;
+
+  margin: 0 auto;
   text-align: center;
+  display: grid;
+  justify-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(65, 65, 65);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  width: 70px;
+  object-fit: cover;
+  border-radius: 5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.followersContainer {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 0.7em;
+  flex-wrap: wrap;
+  max-width: 768px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.follower {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 120px;
+  max-height: 120px;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  text-align: center;
+  color: rgb(58, 58, 58);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnContainer {
+  display: flex;
+  gap: 0.25rem;
+}
+button {
+  background-color: rgb(214, 236, 255);
+  all: unset;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(96, 231, 255);
+}
+.activeBtn {
+  background-color: rgb(96, 231, 255);
 }
