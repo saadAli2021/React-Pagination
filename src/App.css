@@ -16,11 +16,11 @@ img {
   border-radius: 5rem;
 }
 .followersContainer {
-  margin-top: 2rem;
   display: flex;
   gap: 0.7em;
   flex-wrap: wrap;
   max-width: 768px;
+  min-height: 511px;
   padding: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -54,4 +54,7 @@ button:hover {
 }
 .activeBtn {
   background-color: rgb(96, 231, 255);
+}
+.next_Prev_Btn {
+  border: 1px solid rgb(107, 169, 194);
 }

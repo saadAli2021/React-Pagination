@@ -17,6 +17,21 @@ function App() {
     setPage(index);
   };
 
+  const nextPage = () => {
+    setPage((oldpage) => {
+      let newpage = 0;
+      if (oldpage < data.length - 1) newpage = oldpage + 1;
+      return newpage;
+    });
+  };
+
+  const prevPage = () => {
+    setPage((oldpage) => {
+      let newpage = data.length - 1;
+      if (oldpage > 0) newpage = oldpage - 1;
+      return newpage;
+    });
+  };
   return (
     <div className="App">
       <h3>Pagination Demo</h3>
@@ -26,6 +41,9 @@ function App() {
         })}
       </div>
       <div className="btnContainer">
+        <button className="next_Prev_Btn" onClick={() => prevPage()}>
+          Prev
+        </button>
         {data.map((_, index) => {
           return (
             <button
@@ -36,6 +54,9 @@ function App() {
             </button>
           );
         })}
+        <button className="next_Prev_Btn" onClick={() => nextPage()}>
+          Next
+        </button>
       </div>
     </div>
   );
